@@ -6,5 +6,5 @@ __pycache__/
 
 # data
 data/
-data/train.csv
-models/
+models/*
+!models/ckpt-f1-0.8087431788444519-acc-0.9993855357170105-loss-0.0037016238129025675.h5
