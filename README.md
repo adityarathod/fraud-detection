@@ -42,6 +42,9 @@ A higher score is not practically achievable due to the imbalance between positi
 
 `python main.py`
 
+## Pretrained Model
+A pretrained model is located under `models/`. Its statistics on the test set are contained in its file name.
+
 ## Data Ownership
 This dataset (Credit Card Fraud) is licensed under the Database Contents License and is used under its terms.
 The originator of the dataset is the ULB Machine Learning Group. 
