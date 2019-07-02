@@ -29,9 +29,9 @@ _________________________________________________________________
 The first `Dense` layer has a ReLU activation function, and the output layer has a `Sigmoid` activation function. 
 
 ## Performance
-This model performs with 99.99% accuracy on the test set, as generated through a deterministic random shuffle of the original dataset.
+This model performs with 99.94% accuracy on the test set, as generated through a deterministic random shuffle of the original dataset.
 
-This model also does relatively well when evaluated on other metrics, such as F₁ score (0.77-0.80 on the test set). 
+This model also does relatively well when evaluated on other metrics, such as F₁ score (0.80-0.81 on the test set). 
 A higher score is not practically achievable due to the imbalance between positive and negative examples within the dataset (there are much fewer fraud transactions vs. non-fraud).
 
 ## Install

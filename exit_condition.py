@@ -16,5 +16,5 @@ class F1Callback(keras.callbacks.Callback):
         r = logs['val_recall']
         f1 = 2 * ((p * r) / (p + r))
         print(f'\nval_f1: {f1}')
-        if f1 >= 0.77:
+        if f1 >= 0.8:
             self.model.stop_training = True
