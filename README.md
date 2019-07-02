@@ -35,12 +35,10 @@ This model also does relatively well when evaluated on other metrics, such as Fâ
 A higher score is not practically achievable due to the imbalance between positive and negative examples within the dataset (there are much fewer fraud transactions vs. non-fraud).
 
 ## Install
-`virtualenv env; source env/bin/activate`
-
-
-`pip install -r requirements.txt`
-
-`python main.py`
+1. `virtualenv env; source env/bin/activate`
+2. `pip install -r requirements.txt`
+3. Put Credit Card Fraud dataset under `data/train.csv`
+4. `python main.py`
 
 ## Pretrained Model
 A pretrained model is located under `models/`. Its statistics on the test set are contained in its file name.
