@@ -14,12 +14,12 @@ Model: "sequential"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-dense (Dense)                (None, 512)               15360     
+dense (Dense)                (None, 5)                 150       
 _________________________________________________________________
-dense_1 (Dense)              (None, 1)                 513       
+dense_1 (Dense)              (None, 1)                 6         
 =================================================================
-Total params: 15,873
-Trainable params: 15,873
+Total params: 156
+Trainable params: 156
 Non-trainable params: 0
 _________________________________________________________________
 
@@ -29,14 +29,10 @@ _________________________________________________________________
 The first `Dense` layer has a ReLU activation function, and the output layer has a `Sigmoid` activation function. 
 
 ## Performance
-This model performs with 99.94% accuracy on the test set, as generated through a deterministic random shuffle of the original dataset.
+This model performs with 99.99% accuracy on the test set, as generated through a deterministic random shuffle of the original dataset.
 
-However, this model does poorly when evaluated based on other metrics, such as F₁ score (0.0217 on the test set). 
-This is due to the imbalance of labels within the dataset (there are much fewer fraud transactions vs. non-fraud).
-
-## TODOs
-- figure out how to optimize for F₁ score as well as accuracy
-- feed the model balanced subsets of the data to help the classifier better learn what fraud looks like
+This model also does relatively well when evaluated on other metrics, such as F₁ score (0.77-0.80 on the test set). 
+A higher score is not practically achievable due to the imbalance between positive and negative examples within the dataset (there are much fewer fraud transactions vs. non-fraud).
 
 ## Install
 `virtualenv env; source env/bin/activate`
