@@ -2,8 +2,7 @@
 #  Copyright (c) 2019 Aditya Rathod. All rights reserved.
 
 from tensorflow import keras
-import numpy as np
-from sklearn.metrics import f1_score
+
 
 class AccuracyCallback(keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
