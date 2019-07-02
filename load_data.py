@@ -1,10 +1,18 @@
 #  load_data.py
 #  Copyright (c) 2019 Aditya Rathod. All rights reserved.
 
+from typing import Tuple
+
+import numpy as np
 import pandas as pd
 
 
-def load_data(path='data/train.csv'):
+def load_data(path: str = 'data/train.csv') -> Tuple[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray]]:
+    """
+    Load training, test, and cross-validation sets based on a deterministic shuffle in a 70-20-10 percent ratio.
+    :param path: The path to the dataset.
+    :return: A tuple containing all the x and y-values of the training, test, and validation sets.
+    """
     X = pd.read_csv(path).sample(frac=1, random_state=1).reset_index(drop=True)
     y = X['Class']
     X.drop(columns=['Class', 'Time'], inplace=True)
